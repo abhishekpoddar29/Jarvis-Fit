@@ -1,0 +1,112 @@
+greet_user_task:
+  description: >
+    Triggered immediately after wake trigger is detected. Perform the following
+    steps in order:
+    1. Call LocationTool to detect user city and coordinates via IP.
+    2. Call WeatherTool with coordinates to fetch temperature and weather condition.
+    3. Call DateTimeTool to get current date, formatted date string, current time,
+       and current day name such as Monday or Saturday.
+    4. Construct a greeting in this format:
+       Hello Abhi, good {morning/afternoon/evening}. Today is {Day}, {Month Date}.
+       It is currently {time}. In {city}, the temperature is {temp} degrees with
+       {condition}. How would you like to start your day?
+    5. Call SpeakerTool to speak the greeting aloud.
+    6. Enter listening state and wait for start_workout intent from user.
+  expected_output: >
+    Greeting spoken aloud with user name, current day, date, time, city,
+    temperature, and weather condition. System waiting for user start confirmation.
+  agent: greeter_agent
+
+
+load_and_present_workout_task:
+  description: >
+    Triggered after start_workout intent is confirmed by user. Perform the
+    following steps in order:
+    1. Call DateTimeTool to get today's day name.
+    2. Call WorkoutPlanLoaderTool with today's day name to fetch that day's
+       gym_workout, yoga_session, and running_session from workout_plan.json.
+    3. Check if today is Monday and if daily_logs shows a completed previous week.
+       If yes, call SessionStateWriterTool to reset all daily_logs, streak_days,
+       completed_days, and all completion flags for a fresh week.
+    4. Populate today_progress.exercises in session_state.json with all exercises
+       from today's plan, each with status set to pending.
+    5. Set session_status to active, session_start_time to current timestamp,
+       and agent_state.active_session to true via SessionStateWriterTool.
+    6. Construct and speak today's plan summary via SpeakerTool in this format:
+       Here is your plan for today {Day}. Focus is {focus}. You have {n} gym
+       exercises, {n} yoga poses, and {n} running activities. Let's get started.
+       Your first exercise is {first exercise name}.
+  expected_output: >
+    Session state updated with today's dynamic plan. All exercises loaded with
+    pending status. Session marked active. Today's plan spoken aloud to user.
+  agent: workout_manager_agent
+  context:
+    - greet_user_task
+
+
+recommend_next_exercise_task:
+  description: >
+    Triggered after every exercise_completed or exercise_skipped intent, and
+    also on request_next intent. Perform the following:
+    1. Call SessionStateReaderTool to get today_progress.exercises.
+    2. Filter all exercises across gym, yoga, and running with status pending.
+    3. Select the next 1 to 2 pending exercises in plan order.
+    4. If pending exercises exist, construct and speak a recommendation via
+       SpeakerTool in this format:
+       Great work on {completed exercise}! Next up is {exercise 1}. After that
+       you can move on to {exercise 2}.
+    5. If no pending exercises remain, speak:
+       Amazing work Abhi, you have completed all exercises for today. Let me
+       put together your nutrition summary.
+       Then trigger end_session_task.
+  expected_output: >
+    Next 1 to 2 pending exercises spoken aloud after each completion. End of
+    session triggered automatically when no exercises remain.
+  agent: recommendation_agent
+
+
+end_session_task:
+  description: >
+    Triggered either when all exercises are completed or when shutdown trigger
+    is detected. Perform the following steps in order:
+    1. Call SessionStateWriterTool to set session_status to completed,
+       session_end_time to current timestamp, active_session to false,
+       and jarvis_awake to false.
+    2. Add today's day to completed_days list if not already present.
+    3. Update streak_days count.
+    4. Update daily_logs for today with final completion flags.
+    5. Persist all state changes via SessionStateWriterTool.
+    6. If diet_summary_given is false, trigger deliver_diet_advice_task.
+    7. After diet advice is delivered, speak closing message via SpeakerTool:
+       Have a great day Abhi. Jarvis going to sleep. Goodbye.
+    8. Reset agent_state flags. System returns to idle listening state.
+  expected_output: >
+    Session state fully updated and persisted. Diet advice triggered once.
+    Closing message spoken. System returned to idle state.
+  agent: workout_manager_agent
+
+
+
+deliver_diet_advice_task:
+  description: >
+    Triggered once at session end if diet_summary_given is false. Perform the
+    following steps in order:
+    1. Call SessionStateReaderTool to get the list of completed exercises from
+       today_progress.exercises.
+    2. Call DietRulesTool with the completed exercise list to calculate:
+       - Total protein intake recommended in grams.
+       - Water intake recommended in liters.
+       - Meal suggestions for post workout recovery.
+       - Any specific nutrition notes based on today's workout focus.
+    3. Construct and speak the nutrition summary via SpeakerTool in this format:
+       Here is your post workout nutrition summary for today. You completed
+       {n} exercises. You should aim for {protein}g of protein today. Drink
+       at least {water}L of water. For your post workout meal, {meal suggestion}.
+       {Any additional notes based on focus}.
+    4. Call SessionStateWriterTool to set diet_summary_given to true.
+  expected_output: >
+    Personalized protein, water, and meal recommendation spoken aloud based on
+    today's completed exercises. diet_summary_given set to true in session state.
+  agent: diet_advisor_agent
+  context:
+    - end_session_task

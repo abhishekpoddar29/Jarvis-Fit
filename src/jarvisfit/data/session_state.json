@@ -1,0 +1,81 @@
+{
+  "user_id": "abhi_001",
+  "plan_name": "JarvisFit Weekly Fitness Plan",
+  "current_day": "Sunday",
+  "current_day_index": 0,
+  "session_status": "not_started",
+  "session_start_time": null,
+  "session_end_time": null,
+  "week_progress_percentage": 0,
+  "completed_days": [
+    "Saturday",
+    "Sunday"
+  ],
+  "today_progress": {
+    "gym_completed": false,
+    "yoga_completed": false,
+    "running_completed": false,
+    "completion_percentage": 0,
+    "exercises": {
+      "gym": [],
+      "yoga": [],
+      "running": []
+    }
+  },
+  "daily_logs": {
+    "Monday": {
+      "gym_completed": false,
+      "yoga_completed": false,
+      "running_completed": false,
+      "notes": ""
+    },
+    "Tuesday": {
+      "gym_completed": false,
+      "yoga_completed": false,
+      "running_completed": false,
+      "notes": ""
+    },
+    "Wednesday": {
+      "gym_completed": false,
+      "yoga_completed": false,
+      "running_completed": false,
+      "notes": ""
+    },
+    "Thursday": {
+      "gym_completed": false,
+      "yoga_completed": false,
+      "running_completed": false,
+      "notes": ""
+    },
+    "Friday": {
+      "gym_completed": false,
+      "yoga_completed": false,
+      "running_completed": false,
+      "notes": ""
+    },
+    "Saturday": {
+      "gym_completed": true,
+      "yoga_completed": true,
+      "running_completed": true,
+      "notes": "Session completed via jarvisfit"
+    },
+    "Sunday": {
+      "gym_completed": true,
+      "yoga_completed": true,
+      "running_completed": true,
+      "notes": "Session completed via jarvisfit"
+    }
+  },
+  "last_updated": "2026-06-14T12:17:17.114704",
+  "streak_days": 3,
+  "diet_summary_given": false,
+  "agent_state": {
+    "jarvis_awake": false,
+    "listening_for_command": true,
+    "awaiting_user_confirmation": false,
+    "next_action": "free_assist",
+    "active_session": false,
+    "speaking": false
+  },
+  "last_speech": ""
+}

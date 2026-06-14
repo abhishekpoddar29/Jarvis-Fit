@@ -1,0 +1,17 @@
+greet_user_task:
+  description: >
+    Perform the following steps in order and return all results.
+    Step 1: Call LocationTool to detect the user city and coordinates via IP.
+    Step 2: Call WeatherTool with the coordinates to fetch temperature and weather condition.
+    Step 3: Call DateTimeTool to get the current date, formatted date string,
+    current time, day name, and greeting time such as morning afternoon or evening.
+    Step 4: Call NewsTool to fetch the top 3 latest news headlines.
+    Return all fetched data including city, temperature, condition, day name,
+    date, time, greeting time, and the three headlines as your final answer.
+    Do not call SpeakerTool. Just return the data.
+  expected_output: >
+    A structured summary containing city name, temperature, weather condition,
+    current day name, formatted date, current time, greeting time, and
+    three news headlines. No audio output. Data only.
+  agent: greeter_agent
+

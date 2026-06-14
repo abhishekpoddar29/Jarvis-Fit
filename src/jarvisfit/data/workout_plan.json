@@ -1,0 +1,111 @@
+{
+    "plan_name": "Jarvisfit Weekly Fitness Plan",
+    "duration": "7 Days",
+    "difficulty": "Beginner",
+    "days": [
+      {
+        "day": "Monday",
+        "focus": "Chest and Triceps",
+        "gym_workout": [
+          { "exercise": "Push Ups",               "sets": 3, "reps": 12 },
+          { "exercise": "Bench Press",             "sets": 3, "reps": 10 },
+          { "exercise": "Incline Dumbbell Press",  "sets": 3, "reps": 12 },
+          { "exercise": "Tricep Dips",             "sets": 3, "reps": 12 }
+        ],
+        "yoga_session": [
+          { "pose": "Bhujangasana",  "duration_minutes": 3 },
+          { "pose": "Balasana",      "duration_minutes": 5 }
+        ],
+        "running_session": []
+      },
+      {
+        "day": "Tuesday",
+        "focus": "Back and Biceps",
+        "gym_workout": [
+          { "exercise": "Lat Pulldown",  "sets": 3, "reps": 12 },
+          { "exercise": "Seated Row",    "sets": 3, "reps": 12 },
+          { "exercise": "Dumbbell Curl", "sets": 3, "reps": 12 },
+          { "exercise": "Hammer Curl",   "sets": 3, "reps": 10 }
+        ],
+        "yoga_session": [
+          { "pose": "Cat Cow Stretch", "duration_minutes": 5 },
+          { "pose": "Child Pose",      "duration_minutes": 5 }
+        ],
+        "running_session": []
+      },
+      {
+        "day": "Wednesday",
+        "focus": "Legs",
+        "gym_workout": [
+          { "exercise": "Bodyweight Squats", "sets": 3, "reps": 15 },
+          { "exercise": "Leg Press",         "sets": 3, "reps": 12 },
+          { "exercise": "Walking Lunges",    "sets": 3, "reps": 12 },
+          { "exercise": "Calf Raises",       "sets": 3, "reps": 20 }
+        ],
+        "yoga_session": [
+          { "pose": "Warrior II",  "duration_minutes": 5 },
+          { "pose": "Tree Pose",   "duration_minutes": 5 }
+        ],
+        "running_session": [
+          { "type": "Easy Jog", "duration_minutes": 15 }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "focus": "Shoulders and Core",
+        "gym_workout": [
+          { "exercise": "Shoulder Press",  "sets": 3, "reps": 12 },
+          { "exercise": "Lateral Raises",  "sets": 3, "reps": 15 },
+          { "exercise": "Plank",           "sets": 3, "duration_seconds": 45 },
+          { "exercise": "Russian Twists",  "sets": 3, "reps": 20 }
+        ],
+        "yoga_session": [
+          { "pose": "Downward Dog",         "duration_minutes": 5 },
+          { "pose": "Seated Forward Bend",  "duration_minutes": 5 }
+        ],
+        "running_session": []
+      },
+      {
+        "day": "Friday",
+        "focus": "Full Body Strength",
+        "gym_workout": [
+          { "exercise": "Deadlift",      "sets": 3, "reps": 8  },
+          { "exercise": "Push Ups",      "sets": 3, "reps": 15 },
+          { "exercise": "Goblet Squats", "sets": 3, "reps": 12 },
+          { "exercise": "Plank",         "sets": 3, "duration_seconds": 60 }
+        ],
+        "yoga_session": [
+          { "pose": "Sun Salutation", "duration_minutes": 10 }
+        ],
+        "running_session": [
+          { "type": "Tempo Run", "duration_minutes": 20 }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "focus": "Mobility and Recovery",
+        "gym_workout": [
+          { "exercise": "Treadmill Walk",   "duration_minutes": 20 },
+          { "exercise": "Light Stretching", "duration_minutes": 15 }
+        ],
+        "yoga_session": [
+          { "pose": "Pigeon Pose",    "duration_minutes": 5  },
+          { "pose": "Butterfly Pose", "duration_minutes": 5  },
+          { "pose": "Savasana",       "duration_minutes": 10 }
+        ],
+        "running_session": []
+      },
+      {
+        "day": "Sunday",
+        "focus": "Yoga and Active Recovery",
+        "gym_workout": [],
+        "yoga_session": [
+          { "pose": "Sun Salutation", "duration_minutes": 10 },
+          { "pose": "Tree Pose",      "duration_minutes": 5  },
+          { "pose": "Cobra Pose",     "duration_minutes": 5  },
+          { "pose": "Savasana",       "duration_minutes": 10 }
+        ],
+        "running_session": []
+      }
+    ]
+  }

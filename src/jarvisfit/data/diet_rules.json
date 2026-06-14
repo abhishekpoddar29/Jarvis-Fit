@@ -1,0 +1,244 @@
+{
+    "meta": {
+      "version": "1.0",
+      "description": "FitJarvis daily nutrition rules based on workout plan",
+      "protein_formula": "body_weight_kg * 2 = daily_protein_grams",
+      "default_body_weight_kg": 57,
+      "note": "Update default_body_weight_kg to your actual weight for accurate calculations"
+    },
+  
+    "base_nutrition": {
+      "protein_multiplier": 2,
+      "base_water_liters": 3.5,
+      "vitamins": {
+        "vitamin_c_mg": 1000,
+        "vitamin_d_iu": 2000,
+        "vitamin_b12_mcg": 2.4,
+        "magnesium_mg": 400,
+        "omega3_grams": 2
+      },
+      "zinc_for_sleep": {
+        "zinc_mg": 11,
+        "timing": "Take 30 minutes before bed for better sleep quality",
+        "food_sources": [
+          "pumpkin seeds",
+          "chickpeas",
+          "cashews",
+          "meat",
+          "eggs"
+        ]
+      }
+    },
+  
+    "exercise_calories": {
+      "Push Ups":               { "calories_per_set": 10, "sets": 3 },
+      "Bench Press":            { "calories_per_set": 12, "sets": 3 },
+      "Incline Dumbbell Press": { "calories_per_set": 12, "sets": 3 },
+      "Tricep Dips":            { "calories_per_set": 9,  "sets": 3 },
+      "Lat Pulldown":           { "calories_per_set": 10, "sets": 3 },
+      "Seated Row":             { "calories_per_set": 10, "sets": 3 },
+      "Dumbbell Curl":          { "calories_per_set": 7,  "sets": 3 },
+      "Hammer Curl":            { "calories_per_set": 7,  "sets": 3 },
+      "Bodyweight Squats":      { "calories_per_set": 13, "sets": 3 },
+      "Leg Press":              { "calories_per_set": 17, "sets": 3 },
+      "Walking Lunges":         { "calories_per_set": 15, "sets": 3 },
+      "Calf Raises":            { "calories_per_set": 5,  "sets": 3 },
+      "Shoulder Press":         { "calories_per_set": 10, "sets": 3 },
+      "Lateral Raises":         { "calories_per_set": 7,  "sets": 3 },
+      "Plank":                  { "calories_per_set": 5,  "sets": 3 },
+      "Russian Twists":         { "calories_per_set": 9,  "sets": 3 },
+      "Deadlift":               { "calories_per_set": 17, "sets": 3 },
+      "Goblet Squats":          { "calories_per_set": 13, "sets": 3 },
+      "Treadmill Walk":         { "calories_per_minute": 6  },
+      "Light Stretching":       { "calories_per_minute": 2  },
+      "Easy Jog":               { "calories_per_minute": 8  },
+      "Tempo Run":              { "calories_per_minute": 10 },
+      "Bhujangasana":           { "calories_per_minute": 3  },
+      "Balasana":               { "calories_per_minute": 2  },
+      "Cat Cow Stretch":        { "calories_per_minute": 3  },
+      "Child Pose":             { "calories_per_minute": 2  },
+      "Warrior II":             { "calories_per_minute": 4  },
+      "Tree Pose":              { "calories_per_minute": 3  },
+      "Downward Dog":           { "calories_per_minute": 4  },
+      "Seated Forward Bend":    { "calories_per_minute": 2  },
+      "Sun Salutation":         { "calories_per_minute": 5  },
+      "Pigeon Pose":            { "calories_per_minute": 3  },
+      "Butterfly Pose":         { "calories_per_minute": 2  },
+      "Savasana":               { "calories_per_minute": 1  },
+      "Cobra Pose":             { "calories_per_minute": 3  }
+    },
+  
+    "daily_plans": {
+      "Monday": {
+        "focus": "Chest and Triceps",
+        "estimated_calories_burned": 290,
+        "water_liters": 3.5,
+        "protein_note": "Chest day demands high protein for muscle repair. Aim for weight x 2 grams.",
+        "meal_suggestions": {
+          "pre_workout": "Banana with peanut butter and black coffee",
+          "post_workout": "Grilled chicken breast 200g with brown rice and steamed broccoli",
+          "dinner": "Paneer tikka with whole wheat roti and cucumber salad",
+          "snacks": "Handful of almonds and a boiled egg"
+        },
+        "vitamins": {
+          "vitamin_c_mg": 1000,
+          "vitamin_d_iu": 2000,
+          "vitamin_b12_mcg": 2.4,
+          "magnesium_mg": 400,
+          "omega3_grams": 2,
+          "zinc_mg": 11,
+          "zinc_timing": "Take zinc 30 minutes before bed for deeper sleep and chest muscle recovery"
+        },
+        "nutrition_note": "Tricep and chest muscles need glycine and leucine rich foods. Include eggs and dairy today."
+      },
+  
+      "Tuesday": {
+        "focus": "Back and Biceps",
+        "estimated_calories_burned": 265,
+        "water_liters": 3.5,
+        "protein_note": "Back training stresses the largest muscle group. Prioritize protein within 30 mins post workout.",
+        "meal_suggestions": {
+          "pre_workout": "Oats with banana and a scoop of protein powder",
+          "post_workout": "Eggs 3 whole with whole grain toast and a glass of milk",
+          "dinner": "Dal makhani with rice and a side of curd",
+          "snacks": "Greek yogurt with flaxseeds"
+        },
+        "vitamins": {
+          "vitamin_c_mg": 1000,
+          "vitamin_d_iu": 2000,
+          "vitamin_b12_mcg": 2.4,
+          "magnesium_mg": 400,
+          "omega3_grams": 2,
+          "zinc_mg": 11,
+          "zinc_timing": "Take zinc before sleep. Back training elevates cortisol and zinc helps regulate it."
+        },
+        "nutrition_note": "Bicep curl volume is high today. Add a banana post workout for fast glycogen replenishment."
+      },
+  
+      "Wednesday": {
+        "focus": "Legs",
+        "estimated_calories_burned": 420,
+        "water_liters": 4.0,
+        "protein_note": "Leg day burns the most calories. Protein requirement is highest today. Weight x 2.2 grams recommended.",
+        "meal_suggestions": {
+          "pre_workout": "Rice with dal and a boiled egg 90 minutes before workout",
+          "post_workout": "Protein smoothie with oats, banana, milk and peanut butter",
+          "dinner": "Chicken curry with chapati and mixed vegetable salad",
+          "snacks": "Pumpkin seeds and a glass of buttermilk"
+        },
+        "vitamins": {
+          "vitamin_c_mg": 1000,
+          "vitamin_d_iu": 2000,
+          "vitamin_b12_mcg": 2.4,
+          "magnesium_mg": 500,
+          "omega3_grams": 3,
+          "zinc_mg": 11,
+          "zinc_timing": "Zinc is critical tonight. Leg day causes maximum muscle breakdown. Take with magnesium before bed."
+        },
+        "nutrition_note": "Leg day is your highest calorie burn day. Do not skip carbs. Quads and hamstrings need both protein and glycogen."
+      },
+  
+      "Thursday": {
+        "focus": "Shoulders and Core",
+        "estimated_calories_burned": 255,
+        "water_liters": 3.5,
+        "protein_note": "Shoulders are small muscles but respond well to protein timing. Eat within 45 mins post workout.",
+        "meal_suggestions": {
+          "pre_workout": "Boiled eggs with whole wheat toast and black coffee",
+          "post_workout": "Sprouts chaat with lemon and a glass of whey protein",
+          "dinner": "Grilled fish or paneer with roasted vegetables and soup",
+          "snacks": "Cashews and a fruit of your choice"
+        },
+        "vitamins": {
+          "vitamin_c_mg": 1000,
+          "vitamin_d_iu": 2000,
+          "vitamin_b12_mcg": 2.4,
+          "magnesium_mg": 400,
+          "omega3_grams": 2,
+          "zinc_mg": 11,
+          "zinc_timing": "Core training stresses the nervous system. Zinc and magnesium together improve sleep quality tonight."
+        },
+        "nutrition_note": "Plank and Russian Twists engage deep core stabilizers. Include anti-inflammatory foods like turmeric milk tonight."
+      },
+  
+      "Friday": {
+        "focus": "Full Body Strength",
+        "estimated_calories_burned": 480,
+        "water_liters": 4.0,
+        "protein_note": "Full body day is your second highest calorie burn. Protein target is weight x 2.2 grams today.",
+        "meal_suggestions": {
+          "pre_workout": "Sweet potato with boiled eggs and a black coffee",
+          "post_workout": "Chicken rice bowl with steamed greens and a glass of milk",
+          "dinner": "Rajma with brown rice and a side of curd",
+          "snacks": "Mixed nuts and a banana"
+        },
+        "vitamins": {
+          "vitamin_c_mg": 1500,
+          "vitamin_d_iu": 2000,
+          "vitamin_b12_mcg": 2.4,
+          "magnesium_mg": 500,
+          "omega3_grams": 3,
+          "zinc_mg": 11,
+          "zinc_timing": "Deadlifts and full body compound movements deplete zinc rapidly. Take zinc supplement tonight without fail."
+        },
+        "nutrition_note": "Deadlift is the most demanding exercise in your plan. Your body will repair overnight. Prioritize sleep and zinc tonight."
+      },
+  
+      "Saturday": {
+        "focus": "Mobility and Recovery",
+        "estimated_calories_burned": 180,
+        "water_liters": 3.0,
+        "protein_note": "Recovery day protein is still important. Maintain weight x 1.6 grams to support muscle repair from the week.",
+        "meal_suggestions": {
+          "pre_workout": "Light fruit bowl with chia seeds and honey",
+          "post_workout": "Light khichdi with ghee and a glass of buttermilk",
+          "dinner": "Vegetable soup with whole grain bread and a boiled egg",
+          "snacks": "Coconut water and a handful of walnuts"
+        },
+        "vitamins": {
+          "vitamin_c_mg": 1000,
+          "vitamin_d_iu": 2000,
+          "vitamin_b12_mcg": 2.4,
+          "magnesium_mg": 400,
+          "omega3_grams": 2,
+          "zinc_mg": 11,
+          "zinc_timing": "Recovery day zinc helps consolidate the week's muscle gains. Take it tonight for maximum benefit."
+        },
+        "nutrition_note": "Today is about repair not growth. Focus on easy to digest anti-inflammatory foods. Avoid heavy meals tonight."
+      },
+  
+      "Sunday": {
+        "focus": "Yoga and Active Recovery",
+        "estimated_calories_burned": 120,
+        "water_liters": 3.0,
+        "protein_note": "Rest day protein should be weight x 1.5 grams. Your muscles are still recovering from the week.",
+        "meal_suggestions": {
+          "pre_workout": "Green tea with a banana and almonds",
+          "post_workout": "Poha or upma with coconut chutney",
+          "dinner": "Moong dal with roti and a cucumber salad",
+          "snacks": "Fruit bowl with flaxseeds and a glass of warm milk"
+        },
+        "vitamins": {
+          "vitamin_c_mg": 1000,
+          "vitamin_d_iu": 2000,
+          "vitamin_b12_mcg": 2.4,
+          "magnesium_mg": 350,
+          "omega3_grams": 2,
+          "zinc_mg": 11,
+          "zinc_timing": "Sunday zinc dose primes your body for the new week. Take with warm milk before bed."
+        },
+        "nutrition_note": "Sun Salutation is your only intense movement today. Savasana reduces cortisol. Keep meals light and nourishing."
+      }
+    },
+  
+    "weekly_summary_targets": {
+      "avg_daily_protein_grams_per_kg": 2.0,
+      "avg_daily_water_liters": 3.5,
+      "zinc_mg_daily": 11,
+      "magnesium_mg_daily": 400,
+      "vitamin_c_mg_daily": 1000,
+      "vitamin_d_iu_daily": 2000,
+      "omega3_grams_daily": 2,
+      "note": "These are weekly averages. High intensity days require more protein and water."
+    }
+  }
