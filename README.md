@@ -12,11 +12,8 @@
 *"Hey Jarvis — let's get after it."* 💪
 
 [Python](https://python.org)
-
 [CrewAI](https://crewai.com)
-
 [Gemini](https://ai.google.dev)
-
 [Gradio](https://gradio.app)
 
 ---
