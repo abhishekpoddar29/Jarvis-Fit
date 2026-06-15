@@ -76,7 +76,7 @@ Jarvis  →  "Amazing work! You've completed all exercises for today.
             Have a great day Abhi. Jarvis going to sleep. Goodbye."
 ```
 
-### Demo Video : [https://drive.google.com/file/d/15mfVrOciCaxwIEIxsnBcOC0z_I-AZcZj/view?usp=drive_link](https://drive.google.com/file/d/15mfVrOciCaxwIEIxsnBcOC0z_I-AZcZj/view?usp=drive_link)
+Demo Video : [https://drive.google.com/file/d/15mfVrOciCaxwIEIxsnBcOC0z_I-AZcZj/view?usp=drive_link](https://drive.google.com/file/d/15mfVrOciCaxwIEIxsnBcOC0z_I-AZcZj/view?usp=drive_link)
 
 ---
 
@@ -167,7 +167,6 @@ WakeSequenceCrew
     Python constructs greeting → speak_with_state(greeting)
 ```
 
-**Why only one agent in the crew?** Adding SpeakerTool to the crew caused Gemini 2.5 Flash to return empty responses after 4+ tool calls (thinking token issue). Moving speech to Python eliminated the retry loop entirely.
 
 ### Python-Driven Agents (formerly CrewAI)
 
@@ -328,7 +327,7 @@ uv --version
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/jarvisfit.git
+git clone https://github.com/abhishekpoddar29/Jarvis-Fit.git
 cd jarvisfit
 ```
 
